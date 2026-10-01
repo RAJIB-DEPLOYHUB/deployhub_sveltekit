@@ -1,0 +1,14 @@
+{
+  "name": "deployhub_sveltekit",
+  "framework": "SvelteKit",
+  "category": "Frontend",
+  "runtime": "nodejs",
+  "port": 3000,
+  "buildCommand": "npm install && npm run build",
+  "startCommand": "node build/index.js",
+  "healthCheck": {
+    "path": "/api/health",
+    "expectedStatus": 200,
+    "timeoutSeconds": 10
+  }
+}
